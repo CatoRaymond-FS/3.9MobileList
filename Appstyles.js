@@ -15,19 +15,21 @@ const styles = StyleSheet.create({
         flexGrow: 0,
         flexShrink: 0
     },
-    headingColor: {
-        ...Platform.select({
-            android: {
-                color: 'red'
-            },
-            ios: {
-                color: 'pink'
-            },
-            default: {
-                color: 'green'
-            }
-        })
+    flatList: {
+        borderBottomWidth: 1,
+        borderBottomColor: 'grey',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        width: '100%'
+    },
+    textInput: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        width: '100%',
+        padding: 10,
+        marginBottom: 10
     }
-  });
+});
   
 export default styles;  
