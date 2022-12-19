@@ -9,6 +9,9 @@ import * as Network from 'expo-network';
 import Details from './Details';
 import Heading from './components/Heading';
 import ListContainer from './components/ListContainer';
+import ListItem from './components/ListItem';
+import SignUp from './SignUp';
+import Login from './Login';
 import styles from './Appstyles';
 
 function HomeScreen({navigation}) {
@@ -107,6 +110,8 @@ useEffect(() => {
       }}
       />
       <Button title='Add Game' onPress={() => addGames(title, genre, year)}/>
+      <Button title='Sign Up' onPress={() => navigation.navigate('SignUp')}/>
+      <Button title='Login' onPress={() => navigation.navigate('Login')}/>
       <Button title='Go to Details' onPress={() => navigation.navigate('Details')}/>
     </SafeAreaView>
   );
@@ -120,8 +125,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} options={{title: "My App"}} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{title: "Game Backlog"}} />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="SignUp" component={SignUp} />
       </Stack.Navigator>
 
     </NavigationContainer>
